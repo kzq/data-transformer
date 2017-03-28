@@ -2,12 +2,11 @@ require 'spec_helper'
 
 describe DataTransformer::Configuration do
   let(:params) { { source_path: 'data.json', data_format: :json } }
-  subject { described_class.new(params) }
+  let(:config) { described_class.new(params) }
   
-  its(:source_path) { should eq('data.json') }
+  specify { expect(config.source_path).to eq('data.json') }
   
-  its(:data_format) { should eq(:json) }
-   
-  its(:parser) { should be_a(DataTransformer::JsonParser) }
-    
+  specify { expect(config.data_format).to eq(:json) }
+  
+  specify { expect(config.parser).to be_a(DataTransformer::JsonParser) }
 end
