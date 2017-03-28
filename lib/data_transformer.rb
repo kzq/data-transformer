@@ -1,4 +1,3 @@
-require "data_transformer/version"
 require "data_transformer/configuration"
 
 # Data transfer module
@@ -9,3 +8,8 @@ module DataTransformer
     end
   end
 end
+
+require "data_transformer/version"
+require "data_transformer/extractor"
+require "data_transformer/processor"
+require "data_transformer/json_parser"

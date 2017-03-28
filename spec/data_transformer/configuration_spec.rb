@@ -7,5 +7,7 @@ describe DataTransformer::Configuration do
   its(:source_path) { should eq('data.json') }
   
   its(:data_format) { should eq(:json) }
+   
+  its(:parser) { should be_a(DataTransformer::JsonParser) }
     
 end
