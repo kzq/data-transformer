@@ -1,8 +1,7 @@
 # DataTransformer
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/data_transformer`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+It loads and process data. Data from multiple data sources such as JSON and CSV can be loaded. It can easily be extended to load
+from any data source and then can be processed.   
 
 ## Installation
 
@@ -22,7 +21,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+load 'lib/data_transformer.rb'
+
+config = DataTransformer.config(source_path: 'data.txt', data_format: :json)
+
+
+puts"=======Configuration=========="
+
+puts "config=#{config.inspect}"
+
+puts"=======Data: Loaded==========="
+
+extractor = DataTransformer::Extractor.new
+
+processor = extractor.load(source_path: config.source_path, parser: config.parser, processor: DataTransformer::Processor.new)
+
+puts "data=#{processor.data}"
+
 
 ## Development
 
