@@ -1,3 +1,4 @@
+$LOAD_PATH.unshift(File.dirname(__FILE__))
 require "data_transformer/configuration"
 
 # Data transfer module

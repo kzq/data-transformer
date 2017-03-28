@@ -6,7 +6,7 @@ describe DataTransformer::Processor do
   
   describe '#data' do
     it 'sets data for processing' do
-      expect(processor.data(data)).to eq(data)
+      expect(processor.set_data(data)).to eq(data)
     end
   end 
 end
