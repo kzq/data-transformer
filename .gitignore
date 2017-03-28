@@ -1,0 +1,15 @@
+# ignore IDE project files
+.project
+
+# ignore text editor temp files
+*~
+
+/.bundle/
+/.yardoc
+/Gemfile.lock
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
